@@ -1,0 +1,70 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:frp"
+        xmlns:Properties="clr-namespace:frp.Properties" x:Class="frp.MainWindow"
+        mc:Ignorable="d"
+        ShowTitleBar="True"
+                      BorderThickness="0" 
+                      GlowBrush="Black"
+                      ResizeMode="NoResize"
+        ShowMaxRestoreButton ="False"
+        Title="Frp内网穿透 Enjoy" Height="381.843" Width="513.067">
+    <Controls:MetroWindow.Background>
+        <ImageBrush ImageSource="Resources/61823065_p0.jpg" TileMode="FlipXY" Stretch="UniformToFill" AlignmentX="Left" AlignmentY="Top"/>
+    </Controls:MetroWindow.Background>
+    <Controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+
+    </Controls:MetroWindow.Resources>
+    <Grid>
+        <Popup x:Name="skinUI" Margin="0" PopupAnimation="Fade" PlacementTarget="{Binding ElementName=btnSkin}"
+               StaysOpen="False" SnapsToDevicePixels="True" ClipToBounds="True" AllowsTransparency="True" Placement="Left" VerticalOffset="25">
+            <Border x:Name="bdSkin" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1" 
+                    CornerRadius="8" Height="170" Width="450">
+                <WrapPanel x:Name="skinPanel"/>
+            </Border>
+        </Popup>
+        <Label x:Name="label" Content="本地IP" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="端口" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="类型" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_ip" HorizontalAlignment="Left" Height="26" Margin="69,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" VerticalContentAlignment="Center" Text="127.0.0.1"/>
+        <TextBox x:Name="textBox_port" HorizontalAlignment="Left" Height="26" Margin="69,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67" VerticalContentAlignment="Center" Text="80"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="23" Margin="69,162,0,0" VerticalAlignment="Top" Width="155"/>
+        <Button Style="{StaticResource AccentedSquareButtonStyle}" x:Name="button" Content="开始" HorizontalAlignment="Left" Height="30" Margin="385,284,0,0" VerticalAlignment="Top" Width="88" Click="Button_Click"/>
+        <Label x:Name="label_portto" Content="目标端口" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_toport" HorizontalAlignment="Left" Height="26" Margin="69,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67" VerticalContentAlignment="Center" Text="80"/>
+        <Label x:Name="label_Copy2" Content="名称" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_name" HorizontalAlignment="Left" Height="26" Margin="69,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" VerticalContentAlignment="Center" />
+        <Label x:Name="label_Copy3" Content="密匙" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="69,193,0,0" VerticalAlignment="Top" Width="155"/>
+        <Button Style="{StaticResource SquareButtonStyle}" x:Name="button_Copy" Content="帮助" HorizontalAlignment="Left" Height="30" Margin="292,284,0,0" VerticalAlignment="Top" Width="88" Click="Button_Copy_Click"/>
+        <Label x:Name="label_Copy4" Content="服务器" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="45"/>
+        <TextBox x:Name="textBox_server" HorizontalAlignment="Left" Height="26" Margin="69,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" VerticalContentAlignment="Center" />
+        <Label x:Name="label_Copy5" Content="域名" HorizontalAlignment="Left" Margin="10,224,0,0" VerticalAlignment="Top"/>
+        <Controls:ToggleSwitch
+                                x:Name="isProtect"
+                                OnLabel="使用密码保护网站"
+            OffLabel="不使用密码保护网站"
+            
+            
+                                Style="{StaticResource MahApps.Metro.Styles.ToggleSwitch.Win10}" Margin="265,10,-26.6,316"
+                                />
+        <Label x:Name="label_Copy6" Content="用户名" HorizontalAlignment="Left" Margin="265,41,0,0" VerticalAlignment="Top" Width="45"/>
+        <TextBox x:Name="textBox_user" HorizontalAlignment="Left" Height="26" Margin="315,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" VerticalContentAlignment="Center" />
+        <Label x:Name="label_Copy7" Content="密码" HorizontalAlignment="Left" Margin="265,72,0,0" VerticalAlignment="Top" Width="45"/>
+        <PasswordBox x:Name="passwordweb" HorizontalAlignment="Left" Margin="315,72,0,0" VerticalAlignment="Top" Width="155"/>
+        <Label x:Name="ver" Content="Bata 1.2 测试版" HorizontalAlignment="Left" Height="25" Margin="385,327,0,0" VerticalAlignment="Top" Width="116" FontSize="8" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
+        <Button Style="{StaticResource AccentedSquareButtonStyle}" x:Name="button_Copy1" Content="赏作者一点喝茶钱" HorizontalAlignment="Left" Height="30" Margin="265,112,0,0" VerticalAlignment="Top" Width="205" Click="Button_Copy1_Click"/>
+        <TextBox x:Name="textBox_web" HorizontalAlignment="Left" Height="26" Margin="69,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" VerticalContentAlignment="Center" />
+
+    </Grid>
+</Controls:MetroWindow>
