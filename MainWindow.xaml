@@ -67,7 +67,7 @@
         <TextBox x:Name="textBox_user" HorizontalAlignment="Left" Height="26" Margin="315,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" VerticalContentAlignment="Center" />
         <Label x:Name="label_Copy7" Content="密码" HorizontalAlignment="Left" Margin="265,72,0,0" VerticalAlignment="Top" Width="45"/>
         <PasswordBox x:Name="passwordweb" HorizontalAlignment="Left" Margin="315,72,0,0" VerticalAlignment="Top" Width="155"/>
-        <Label x:Name="ver" Content="Bata 1.2 测试版" HorizontalAlignment="Left" Height="25" Margin="385,327,0,0" VerticalAlignment="Top" Width="116" FontSize="8" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
+        <Label x:Name="ver" Content="Bata 1.2.1 测试版" HorizontalAlignment="Left" Height="25" Margin="385,327,0,0" VerticalAlignment="Top" Width="116" FontSize="8" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
         <Button Style="{StaticResource AccentedSquareButtonStyle}" x:Name="button_Copy1" Content="赏作者一点喝茶钱" HorizontalAlignment="Left" Height="30" Margin="265,112,0,0" VerticalAlignment="Top" Width="205" Click="Button_Copy1_Click"/>
         <TextBox x:Name="textBox_web" HorizontalAlignment="Left" Height="26" Margin="69,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" VerticalContentAlignment="Center" />
         <Button Style="{StaticResource AccentedSquareButtonStyle}" x:Name="button_free" Content="获取免费FRP服务器" HorizontalAlignment="Left" Height="30" Margin="265,147,0,0" VerticalAlignment="Top" Width="205" Click="Button_free_Click"/>
