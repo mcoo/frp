@@ -5,7 +5,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:frp"
-        xmlns:Properties="clr-namespace:frp.Properties" x:Class="frp.MainWindow"
+        xmlns:Properties="clr-namespace:frp.Properties"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" x:Class="frp.MainWindow"
         mc:Ignorable="d"
         ShowTitleBar="True"
                       BorderThickness="0" 
@@ -14,7 +15,9 @@
         ShowMaxRestoreButton ="False"
         Title="Frp内网穿透 Enjoy" Height="381.843" Width="513.067">
     <Controls:MetroWindow.Background>
-        <ImageBrush ImageSource="Resources/61823065_p0.jpg" TileMode="FlipXY" Stretch="UniformToFill" AlignmentX="Left" AlignmentY="Top"/>
+        <ImageBrush ImageSource="Resources/61823065_p0.jpg" TileMode="FlipXY" Stretch="UniformToFill" AlignmentX="Left" AlignmentY="Top">
+        </ImageBrush>
+
     </Controls:MetroWindow.Background>
     <Controls:MetroWindow.Resources>
         <ResourceDictionary>
@@ -26,6 +29,8 @@
 
     </Controls:MetroWindow.Resources>
     <Grid>
+        <!--#region 高斯模糊效果(最底层) -->
+
         <Popup x:Name="skinUI" Margin="0" PopupAnimation="Fade" PlacementTarget="{Binding ElementName=btnSkin}"
                StaysOpen="False" SnapsToDevicePixels="True" ClipToBounds="True" AllowsTransparency="True" Placement="Left" VerticalOffset="25">
             <Border x:Name="bdSkin" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1" 
@@ -65,6 +70,8 @@
         <Label x:Name="ver" Content="Bata 1.2 测试版" HorizontalAlignment="Left" Height="25" Margin="385,327,0,0" VerticalAlignment="Top" Width="116" FontSize="8" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
         <Button Style="{StaticResource AccentedSquareButtonStyle}" x:Name="button_Copy1" Content="赏作者一点喝茶钱" HorizontalAlignment="Left" Height="30" Margin="265,112,0,0" VerticalAlignment="Top" Width="205" Click="Button_Copy1_Click"/>
         <TextBox x:Name="textBox_web" HorizontalAlignment="Left" Height="26" Margin="69,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" VerticalContentAlignment="Center" />
+        <Button Style="{StaticResource AccentedSquareButtonStyle}" x:Name="button_free" Content="获取免费FRP服务器" HorizontalAlignment="Left" Height="30" Margin="265,147,0,0" VerticalAlignment="Top" Width="205" Click="Button_free_Click"/>
+
 
     </Grid>
 </Controls:MetroWindow>

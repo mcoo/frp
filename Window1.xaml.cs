@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,15 @@ namespace frp
         public Window1()
         {
             InitializeComponent();
+            textBox1.IsReadOnly = true;
+            textBox1.Text = Resource1.gpl;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.ShowMessageAsync("提示", "开源地址已复制到你的剪切板，请遵守GPL3.0协议！");
+
+            Clipboard.SetDataObject("https://github.com/mcoo/frp/");
         }
     }
 }

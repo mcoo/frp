@@ -4,6 +4,9 @@ using System.IO;
 using System.Windows;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
+using System.Windows.Media.Animation;
+using System.Windows.Media.Effects;
+using System.Net;
 
 namespace frp
 {
@@ -244,7 +247,7 @@ namespace frp
 
         public void Button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            this.ShowMessageAsync("提示", "服务器请输入类似“127.0.0.1:7000”的地址一定要包括端口！作者地址已经复制到剪切板，如有问题请在上面提出");
+            this.ShowMessageAsync("提示", "服务器请输入类似“127.0.0.1:7000”的地址一定要包括端口！作者博客地址已经复制到剪切板，如有问题请在上面提出");
 
             Clipboard.SetDataObject("https://mcoo.pw");
         }
@@ -255,6 +258,27 @@ namespace frp
             new Window1().Show();
   
 
+        }
+
+        private void Button_free_Click(object sender, RoutedEventArgs e)
+        {
+            /*//获取免费服务器
+            string web= GetWebClient("https://mcoo.pw/frp.txt");
+            web.Split('|');
+            未完成
+            */
+
+
+        }
+        private string GetWebClient(string url)
+        {
+            string strHTML = "";
+            WebClient myWebClient = new WebClient();
+            Stream myStream = myWebClient.OpenRead(url);
+            StreamReader sr = new StreamReader(myStream, System.Text.Encoding.GetEncoding("utf-8"));
+            strHTML = sr.ReadToEnd();
+            myStream.Close();
+            return strHTML;
         }
     }
 }

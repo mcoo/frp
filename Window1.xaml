@@ -5,12 +5,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:frp"
-        mc:Ignorable="d"
+                      mc:Ignorable="d"
         Title="Enjoy" Height="362.787" Width="441.067">
     <Grid>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="18" Margin="10,10,0,0" TextWrapping="Wrap" Text="请作者喝一杯下午茶" VerticalAlignment="Top" Width="135"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="290" Margin="7,28,0,0" VerticalAlignment="Top" Width="206" Source="Resources/1564388747573.jpg"/>
-        <Button Style="{StaticResource AccentedSquareButtonStyle}" x:Name="button" Content="Button" HorizontalAlignment="Left" Height="27" Margin="218,10,0,0" VerticalAlignment="Top" Width="209"/>
+        <Button Style="{StaticResource AccentedSquareButtonStyle}" x:Name="button" Content="开源地址" HorizontalAlignment="Left" Height="27" Margin="218,10,0,0" VerticalAlignment="Top" Width="206" Click="Button_Click"/>
+        <Label x:Name="label" Content="GNU General Public License v3.0 (GPL3.0)" HorizontalAlignment="Left" Margin="179,42,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="224" Margin="213,68,0,0" TextWrapping="Wrap" Text="  GNU GENERAL PUBLIC LICENSE" VerticalAlignment="Top" Width="203"/>
+        <Label x:Name="label_Copy" Content="务必遵守以上协议，其他语言版本请上Github查看" HorizontalAlignment="Left" Margin="213,297,0,0" VerticalAlignment="Top" FontSize="9"/>
 
     </Grid>
 </Controls:MetroWindow>
